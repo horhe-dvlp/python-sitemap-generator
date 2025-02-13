@@ -354,6 +354,7 @@ if __name__ == "__main__":
     
     MaxThreads = args.threads
     InitialURL = args.url
+    filename = args.o
     
     InitialURLInfo = urlparse(InitialURL)
     InitialURLLen = len(InitialURL.split('/'))
@@ -363,8 +364,7 @@ if __name__ == "__main__":
     
     if InitialURLNetloc.startswith(netloc_prefix_str):
         InitialURLNetloc = InitialURLNetloc[netloc_prefix_len:]
-    
-    filename = 'sitemap.xml'
+
     
 
     RunCrawler(InitialURL)
